@@ -1,0 +1,210 @@
+/*-------- General Style -----------*/
+*{
+    font-family: 'Dosis', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: flex;
+    height: 100vh;
+}
+/*-------- Aside -----------*/
+.aside-profile{
+    width: 35%;
+    position: relative;
+}
+.main-content{
+    width: 65%;
+    position: relative;
+}
+.aside-profile img{
+    width: 100%;
+    height: 100vh;
+}
+.aside-info{
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    color: white;
+}
+.aside-info h4{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.aside-info h5{
+    font-size: 20px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.aside-info span{
+    color: cadetblue;
+    font-style: italic;
+}
+.aside-info span:after{
+    content: "";
+    height: 9px;
+    width: 9px;
+    background-color: forestgreen;
+    display: inline-block;
+    margin-left: 5px;
+    border-radius: 50%;
+}
+
+/*-------- Navegation -----------*/
+
+.nav-bar{
+    background-color: #f9f9f9;
+}
+.menu{
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0;
+}
+.menu a{
+    padding: 20px; 
+    text-transform: uppercase;
+    font-weight: 600; 
+    color: black;
+    text-decoration: none;
+}
+.menu a.active, .menu a:hover{
+    background-color: #efefee;
+    color: #5cc4cd;
+    cursor: pointer;
+    border-bottom: 2px solid #24396e;
+}
+/*-------- Article -----------*/
+.wrapper{
+    background-color: #efefee;
+    padding: 25px;
+    margin: 35px;
+    border-radius: 5px;
+    border-left: 3px solid #24396e;
+    position: relative;
+}
+
+blockquote h2{
+    margin-bottom: 10px;
+    font-style: italic;
+}
+blockquote span{
+    color: #5cc4cd;
+}
+blockquote p{
+    color: gray;
+    line-height: 30px;
+    margin-bottom: 20px;
+}
+blockquote .signature{
+    width: 250px;
+    position: absolute;
+    right: 30px;
+    bottom: -35px;
+}
+blockquote:before{
+    content: "\f5a1";
+    width: 33px;
+    height: 33px;
+    color: white;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    background-color: #24396e;
+    border-radius: 5px;
+    font-size: 20px;
+    line-height: 32px;
+    text-align: center;
+}
+/*-------- Buttons Social -----------*/
+.buttons-wrapper{
+    display: flex;
+    margin: 55px 35px;
+    justify-content: space-between;
+}
+.buttons-contact button{
+    padding: 7px 10px;
+    background: none;
+    border: 2px solid #24396e;
+    border-radius: 5px;
+    color: #24396e;
+    margin-right: 10px;
+    font-size: 15px;
+}
+.buttons-contact button:hover, 
+.buttons-social a:hover{
+    background-color: #24396e;
+    color: white;
+    cursor: pointer;
+    transition: .3s ease-out;
+}
+.buttons-contact button i{
+    margin-right: 5px;
+}
+.buttons-social a{
+    text-decoration: none;
+    border: 2px solid #24396e;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+    color: #24396e;
+    text-align: center;
+    line-height: 30px;
+    margin-left: 5px;
+}
+/*-------- Footer -----------*/
+footer{
+    display: flex;
+    flex-wrap: wrap;
+}
+.personal-data{
+    flex-basis: 50%;
+    margin-bottom: 10px;
+}
+.personal-data span{
+    color: gray;
+}
+.personal-data b{
+    display: inline-block;
+    width: 25%;
+}
+
+@media only screen and (max-device-width: 460px){
+    .container{
+        display: inline-block;
+    }
+    .aside-profile, .main-content{
+        width: 100%;
+    }
+    .nav-bar{
+        display: none;
+    }
+    blockquote h2, 
+    blockquote p{
+        margin-bottom: 40px;
+    }
+    .buttons-wrapper{
+        display: block;
+       
+    }
+    .buttons-contact button{
+        margin-bottom: 30px;
+        padding: 10px 20px;
+    }
+    .personal-data{
+        flex-basis: 51%;
+    }
+    .personal-data b{
+        display: block;
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+}
+@media only screen and (max-device-width:320px){
+    blockquote .signature{
+     width: 200px;
+    }
+}
